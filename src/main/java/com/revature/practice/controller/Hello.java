@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.revature.practice.model.AuthenticationRequest;
 import com.revature.practice.model.AuthenticationResponse;
 import com.revature.practice.service.JwtUtil;
+import com.revature.practice.service.MyUserDetailsService;
 
 @RestController
 
@@ -24,7 +25,7 @@ public class Hello {
 	private AuthenticationManager authenticationManager;
 
 	@Autowired
-	private UserDetailsService userDetailsService;
+	private MyUserDetailsService userDetailsService;
 	@Autowired
 	private JwtUtil jwtUtil;
 
